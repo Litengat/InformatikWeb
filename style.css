@@ -9,10 +9,11 @@ body {
     margin: 0px;
 }
 
-header {
+#header {
     height: 200px;
     background-color: var(--primary);
     margin: auto;
+    margin-bottom: 0px;
 }
 #summery{
     width: 100px;
