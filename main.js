@@ -22,7 +22,7 @@ function iframeload() {
     const iframe = document.getElementById("myFrame");
 
     const header = document.getElementById("header");
-    iframe.heighheader.offsetHeight
+    iframe.height = header.offsetHeight + screen.height
 
 
 
