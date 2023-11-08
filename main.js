@@ -1,29 +1,32 @@
+const r = document.querySelector(':root');
+const iframe = document.getElementById("iframe");
 
 
-const iframe = document.getElementById("myFrame");
 
 
 
-
-console.log("The iframe is loaded");
-var titles = iframe.contentWindow.document.getElementsByTagName("H1");
-var summery = document.getElementById("summery");
-for (var title of titles) {
-    var text = title.innerHTML;
-    var newp = document.createElement("p");
-    var newContent = document.createTextNode(text);
-    newp.appendChild(newContent);
-    summery.appendChild(newp);
-
-
+function updatSize(){
+    r.style.setProperty('--screenHeight', window.innerHeight + 'px');
+    console.log(window.innerHeight)
 }
 
-function iframeload() {
-    const iframe = document.getElementById("myFrame");
-
-    const header = document.getElementById("header");
-    iframe.height = header.offsetHeight + screen.height
+updatSize();
 
 
+function oniframeload(){
+    console.log("The iframe is loaded");
+    var titles = iframe.contentWindow.document.getElementsByTagName("H1");
+    var summery = document.getElementById("summery");
+    for (var title of titles) {
+        var text = title.innerHTML;
+        var newp = document.createElement("p");
+        var newContent = document.createTextNode(text);
+        newp.appendChild(newContent);
+        summery.appendChild(newp);
 
+
+    }
 }
+
+
+window.onresize = updatSize;

@@ -6,11 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body lo="main();">
+<body>
     <div id="header"></div>
-    <div id="summery"></div>
     <div id="content">
-        <iframe id="myFrame" src="page1.html" style="height:100%;width:100%" onload=""></iframe>
+    <div id="summery"></div>
+    <div id="iframediv">
+        <iframe id="iframe" src="page1.html" onload="oniframeload()"></iframe>
+    </div>
     </div>
     <script src="main.js" defer></script>
 </body>

@@ -1,6 +1,8 @@
 :root {
     --primary: #212529;
     --sekundary: #343A40;
+    --screenHeight: 1px;
+    --headerHeight: 100px;
 }
 * {
     outline: red solid 1px;
@@ -10,22 +12,25 @@ body {
 }
 
 #header {
-    height: 200px;
+    height: calc(var(--headerHeight));
     background-color: var(--primary);
-    margin: auto;
-    margin-bottom: 0px;
 }
 #summery{
     width: 100px;
-    height: 1000px;
+    height:  calc(var(--screenHeight) - var(--headerHeight) );
 }
-#content{
+#iframediv{
     margin-left: 100px;
-    margin-top: -1000px;
-    height: 1000px;
-    width: 1000xp;
+    margin-top: calc((var(--screenHeight) * -1) + var(--headerHeight) );
+    height: calc(var(--screenHeight) - var(--headerHeight) );
+    width: 1000px;
 }
-#content > iframe{
-    height: 1000px;
-    width: 1000xp;
+#iframediv > iframe{
+    height: calc(var(--screenHeight) - var(--headerHeight));
+    width: 1000px;
+    margin-top: 0px;
+    border: 0px;
+}
+#content {
+    margin-top: -15px;
 }
