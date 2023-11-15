@@ -2,16 +2,12 @@ const r = document.querySelector(':root');
 const iframe = document.getElementById("iframe");
 
 
-
-
-
 function updatSize(){
     r.style.setProperty('--screenHeight', window.innerHeight + 'px');
-    console.log(window.innerHeight)
 }
 
 updatSize();
-
+/*
 
 function oniframeload(){
     console.log("The iframe is loaded");
@@ -23,10 +19,8 @@ function oniframeload(){
         var newContent = document.createTextNode(text);
         newp.appendChild(newContent);
         summery.appendChild(newp);
-
-
     }
 }
 
-
+*/
 window.onresize = updatSize;
