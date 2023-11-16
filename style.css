@@ -2,14 +2,18 @@
     --primary: #212529;
     --sekundary: #343A40;
     --headerHeight: 100px;
+    --screenHeight: 1px;
 }
 
 * {
-    outline: red solid 1px;
+   /* outline: red solid 1px;*/
 }
 body {
     margin: 0px;
 }
+html {
+    scroll-behavior: smooth;
+} 
 #header {
     height: var(--headerHeight);
     background-color: var(--primary);
@@ -19,4 +23,10 @@ body {
 }
 #header > div {
     padding-top: 80px;
+}
+#iframediv {
+    margin-left: 200px;
+}
+#iframe {
+    height: var(--screenHeight);
 }

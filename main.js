@@ -24,3 +24,8 @@ function oniframeload(){
 
 */
 window.onresize = updatSize;
+
+
+/*
+document.getElementById("divFirst").scrollIntoView();
+*/
