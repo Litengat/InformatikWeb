@@ -1,40 +1,22 @@
 :root {
     --primary: #212529;
     --sekundary: #343A40;
-    --screenHeight: 1px;
     --headerHeight: 100px;
 }
+
 * {
     outline: red solid 1px;
 }
 body {
     margin: 0px;
 }
-
 #header {
-    height: calc(var(--headerHeight));
+    height: var(--headerHeight);
     background-color: var(--primary);
-    display: block;
 }
-#header > a {
-    margin-top: 90px;
+#header > div > a {
+    color: #fff;
 }
-#summery{
-    width: 100px;
-    height:  calc(var(--screenHeight) - var(--headerHeight) );
-}
-#iframediv{
-    margin-left: 100px;
-    margin-top: calc((var(--screenHeight) * -1) + var(--headerHeight) );
-    height: calc(var(--screenHeight) - var(--headerHeight) );
-    width: 1000px;
-}
-#iframediv > iframe{
-    height: calc(var(--screenHeight) - var(--headerHeight));
-    width: 1000px;
-    margin-top: 0px;
-    border: 0px;
-}
-#content {
-    margin-top: -15px;
+#header > div {
+    padding-top: 80px;
 }
