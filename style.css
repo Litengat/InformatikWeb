@@ -3,10 +3,11 @@
     --sekundary: #343A40;
     --headerHeight: 100px;
     --screenHeight: 1px;
+    --screenWidht: 1px;
 }
 
 * {
-   /* outline: red solid 1px;*/
+    outline: red solid 1px;
 }
 body {
     margin: 0px;
@@ -24,9 +25,21 @@ html {
 #header > div {
     padding-top: 80px;
 }
-#iframediv {
-    margin-left: 200px;
-}
 #iframe {
     height: var(--screenHeight);
+    width: calc(var(--screenWidht));
+}
+
+#summery {
+    width: 200px;
+}
+#summery > button {
+    width: 200px;
+    border-radius: 30px;
+}
+#content {
+    display: flex;
+}
+.Viewed {
+    background-color: red;
 }
