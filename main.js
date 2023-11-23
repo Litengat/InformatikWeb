@@ -10,20 +10,6 @@ function updatSize(){
 updatSize();
 window.onresize = updatSize;
 
-function onscroll() {
-    var buttons = document.getElementById("summery").getElementsByTagName("button");
-    for (let i = 0; i < buttons.length; i++) {
-        const element = buttons[i];
-        if(isInViewport(elements[i])){
-            element.classList.add("Viewed");
-        }else{
-            element.classList.remove("Viewed");
-        }
-        
-    }
-}
-
-window.onscroll = onscroll();
 
 
 

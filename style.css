@@ -7,7 +7,7 @@
 }
 
 * {
-    outline: red solid 1px;
+    /*outline: red solid 1px;*/
 }
 body {
     margin: 0px;
@@ -18,12 +18,21 @@ html {
 #header {
     height: var(--headerHeight);
     background-color: var(--primary);
+    display: flex;
 }
+
 #header > div > a {
     color: #fff;
 }
+
 #header > div {
     padding-top: 80px;
+    padding-right: 100px;
+}
+
+#benz {
+    width: 100px;
+    height: 100px;
 }
 #iframe {
     height: var(--screenHeight);
@@ -35,11 +44,17 @@ html {
 }
 #summery > button {
     width: 200px;
-    border-radius: 30px;
+    border: none;
+    background-color: transparent;
 }
+
+#summery > button:hover {
+    background-color: transparent;
+    outline: #212529 solid 1px;
+    outline-style: groove;
+}
+
+
 #content {
     display: flex;
-}
-.Viewed {
-    background-color: red;
 }
