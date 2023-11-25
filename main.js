@@ -10,7 +10,7 @@ function updatSize(){
 }
 
 updatSize();
-
+onload();
 window.onresize = updatSize;
 
 function oniframeload(){
@@ -35,5 +35,14 @@ function scrollIntoView(i) {
 }
 
 function loadside(src) {
-    iframe.src = src;
+    location.search = "?side=" + src;
+    iframe.src = side + src;
+}
+function onload() {
+    var parameter = location.search;
+    if(parameter.startsWith("?side")){
+        console.log(parameter);
+        var values = parameter.split('=');
+        iframe.src = values[1];
+    }
 }
