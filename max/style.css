@@ -25,16 +25,6 @@ img {
 }
 
 body > div > div > img {
-    margin-top: -400px;
-    margin-left: 350px;
-}
-.person > img {
-    width: 250px;
-    margin-top: -400px;
-    margin-left: 400px;
-}
-.car > img {
-    width: 400px;
-    margin-top: -800px;
+    margin-top: -500px;
     margin-left: 400px;
 }

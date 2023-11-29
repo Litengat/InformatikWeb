@@ -1,13 +1,13 @@
 :root {
     --primary: #212529;
     --sekundary: #343A40;
-    --headerHeight: 100px;
     --screenHeight: 1px;
     --screenWidht: 1px;
 }
 
 * {
     /*outline: red solid 1px;*/
+    font-family: Arial, Helvetica, sans-serif;
 }
 body {
     margin: 0px;
@@ -16,36 +16,41 @@ html {
     scroll-behavior: smooth;
 } 
 #header {
-    height: var(--headerHeight);
+    height: 150px;
     background-color: var(--primary);
     display: flex;
 }
 
 #header > div > a {
     color: #fff;
+    font-size: 25px;
 }
 
 #header > div {
-    padding-top: 80px;
+    padding-top: 120px;
     padding-right: 100px;
 }
 
 #benz {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 #iframe {
     height: var(--screenHeight);
     width: calc(var(--screenWidht));
+    border: #ADB5BD solid 2px;
 }
 
 #summery {
-    width: 200px;
+    width: 350px;
+    height: var(--screenHeight);
+    outline: 1px solid red;
 }
 #summery > button {
-    width: 200px;
+    width: 350px;
     border: none;
     background-color: transparent;
+    font-size: 25px;
 }
 
 #summery > button:hover {
@@ -61,4 +66,7 @@ html {
 
 a:hover{
     background-color:grey;
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }

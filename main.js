@@ -40,7 +40,6 @@ function oniframescroll() {
 
 
 
-
 function scrollIntoView(i) {
     elements[i].scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 }
