@@ -3,8 +3,8 @@ const iframe = document.getElementById("iframe");
 
 var elements;
 var elementsButton;
-console.log("Start!");
 
+console.log("Start!");
 function updatSize(){
     r.style.setProperty('--screenHeight', window.innerHeight + 'px');
     r.style.setProperty('--screenWidht', window.innerWidth + 'px');
@@ -32,13 +32,9 @@ function oniframeload(){
     
     scrollIntoView(getParameter("element"));
 }
-
 function oniframescroll() {
     console.log("s")
 }
-
-
-
 
 
 function scrollIntoView(i) {
