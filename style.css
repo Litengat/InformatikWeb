@@ -6,7 +6,6 @@
 }
 
 * {
-    /*outline: red solid 1px;*/
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
@@ -24,6 +23,7 @@ html {
 #header > div > a {
     color: #fff;
     font-size: 25px;
+    margin-right: 50px;
 }
 
 #header > div {
@@ -44,7 +44,6 @@ html {
 #summery {
     width: 350px;
     height: var(--screenHeight);
-    outline: 1px solid red;
 }
 #summery > button {
     width: 350px;
@@ -65,8 +64,10 @@ html {
 }
 
 a:hover{
-    background-color:grey;
+    text-decoration: underline;
+
 }
-* {
-    font-family: Arial, Helvetica, sans-serif;
+
+.highlighted{
+    background-color: blue;
 }

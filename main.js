@@ -14,6 +14,7 @@ updatSize();
 onload();
 window.onresize = updatSize;
 
+
 function oniframeload(){
     console.log("The iframe is loaded");
     elements = iframe.contentWindow.document.getElementsByTagName("H1");
@@ -29,17 +30,32 @@ function oniframeload(){
         newp.onclick = function() { scrollIntoView(i) };
         summery.appendChild(newp);
     }
-    
+    elementsButton = elements.getElementById("summery").getElementsByTagName("button");
     scrollIntoView(getParameter("element"));
 }
 
 function oniframescroll() {
     console.log("s")
 }
-
-
-
-
+ 
+document
+  .querySelector('#documentIFrame')
+  .addEventListener('load', e => {
+    e.target.contentWindow.addEventListener('scroll', e => {
+      highlightelement();
+    });
+  });
+function highlightelement() {
+    for (let i = 0;i < elements.length; i++) {
+        if(isInViewport(elements[i])){
+            elements[i].classList.add("highlighted");
+            alert(elements[i]);
+        } else {
+            elements[1].classList.remove("highlighted");
+        }
+        alert("hi");
+    }
+}
 function scrollIntoView(i) {
     elements[i].scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 }
@@ -49,11 +65,11 @@ function loadside(src) {
     iframe.src = side + src;
 }
 function onload() {
-    iframe.src = getParameter("side");
-    
+    var parameter = location.search;
+    if(parameter != "") {
+        iframe.src = getParameter("side");
+    }
 }
-
-
 function getParameter(key) {
     var parameter = location.search;
     var values = parameter.split('?');
@@ -67,7 +83,10 @@ function getParameter(key) {
     });
     return parameter
 }
-
+function isHidden(el) {
+    var style = window.getComputedStyle(el);
+    return (style.display === 'none')
+}
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -75,7 +94,5 @@ function isInViewport(element) {
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+    }

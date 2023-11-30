@@ -14,17 +14,16 @@
 </head>
 <body>
     <div id="header">
-        <img id="benz" src="img/Benz.png" alt="">
+        <img onclick="loadside('Start.html')" id="benz" src="img/Benz.png" alt="">
         <div>
-            <a onclick="loadside('Andri/Algemein.html')">Allgemein</a>
-            <a onclick="loadside('max/Zukunft.html')">Zukunft</a>
-            <a onclick="loadside('Geschichte/Geschichte.html')">Vergangenheit</a>
-            <a>Modelle</a>
+            <a onclick="loadside('pages/Algemein.html')">Allgemein</a>
+            <a onclick="loadside('pages/Zukunft.html')">Zukunft</a>
+            <a onclick="loadside('pages/Geschichte.html')">Vergangenheit</a>
         </div>
     </div>
     <div id="content">
     <div id="summery"></div>
-    <iframe id="iframe" src="" onload="oniframeload()" onscroll="oniframescroll()" frameBorder="0"></iframe>
+    <iframe id="iframe" src="Start.html" onload="oniframeload()" onscroll="oniframescroll()" frameBorder="0"></iframe>
     </div>
     <script src="main.js" defer></script>
 </body>
