@@ -4,7 +4,7 @@
 
 
 p {
-    width: 400px;
+    width: 380px;
     font-size: 25px;
 }
 body > div > div {
@@ -39,6 +39,6 @@ body > div > div > img {
     margin-top: -800px;
     margin-left: 400px;
 }
-#Zukunft {
-
+.long {
+    width: 780px;
 }
