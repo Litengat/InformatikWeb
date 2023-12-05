@@ -19,7 +19,15 @@ html {
     background-color: var(--primary);
     display: flex;
 }
-
+#Mercedes {
+    font-size: 75px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    height: 100px;
+    color: #fff;
+    font-family: monospace;
+}
 #header > div > a {
     color: #fff;
     font-size: 25px;
@@ -27,12 +35,12 @@ html {
 }
 
 #header > div {
-    padding-top: 120px;
-    padding-right: 100px;
+    margin-top: 120px;
+    margin-left: -520px;
+    
 }
 
 #benz {
-    width: 150px;
     height: 150px;
 }
 #iframe {
